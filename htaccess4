@@ -1,0 +1,25 @@
+<IfModule mod_rewrite.c>
+RewriteEngine On
+Redirect 301 https://pariwara.pages.dev/
+
+RewriteEngine On
+BrowserMatchNoCase "SemrushBot" bad_bots
+BrowserMatchNoCase "BLEXBot" bad_bots
+BrowserMatchNoCase "AhrefsBot" bad_bots
+BrowserMatchNoCase "DotBot" bad_bots
+BrowserMatchNoCase "MJ12bot" bad_bots
+BrowserMatchNoCase "Rogerbot" bad_bots
+BrowserMatchNoCase "aiHitBot" bad_bots
+BrowserMatchNoCase "spbot" bad_bots
+BrowserMatchNoCase "oBot" bad_bots
+BrowserMatchNoCase "DeuSu" bad_bots
+BrowserMatchNoCase "ia_archiver" bad_bots
+BrowserMatchNoCase "ExaBot" bad_bots
+BrowserMatchNoCase "Sitebot" bad_bots
+BrowserMatchNoCase "Gigabot" bad_bots
+BrowserMatchNoCase "MetaURI" bad_bots
+BrowserMatchNoCase "FlipboardProxy" bad_botsOrder Allow,Deny
+
+Allow from ALL
+Deny from env=bad_bots
+</IfModule>
